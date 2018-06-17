@@ -1,0 +1,9 @@
+<div th:fragment="post-detail" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="post" th:text="${post.title}"></div>
+
+    <table>
+        <tr th:each="reply : ${replyList}">\
+            ​<iframe width="100%" height="38%" th:src="'https://www.youtube.com/embed/' + ${ reply.youtubeUrl } + '?ecver=1'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </tr>
+    </table>
+</div>

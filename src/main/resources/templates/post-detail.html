@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <div th:replace="fragments/common-head::common-head"></div>
+    </head>
+    <body>
+        <div th:replace="fragments/common-menu::common-menu('best')"></div>
+        <div class="content-container">
+            <div th:replace="fragments/post-detail::post-detail"></div>
+
+            <div th:replace="fragments/reply-input::reply-input"></div>
+        </div>
+    </body>
+</html>

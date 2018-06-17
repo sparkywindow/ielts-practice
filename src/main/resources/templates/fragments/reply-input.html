@@ -1,0 +1,38 @@
+<div th:fragment="reply-input" xmlns:th="http://www.w3.org/1999/xhtml">
+    <button id="myBtn"> 답변 추가 하기 </button>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <form action="/reply/create" method="post">
+                postId: <input type="text" name="postId" value="1">
+                youtubeUrl: <input type="text" name="youtubeUrl" value="Please introduce yourself.">
+                <input type="submit" value="등록">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</div>

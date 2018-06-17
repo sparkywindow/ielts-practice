@@ -1,0 +1,70 @@
+body {
+    background-color: #EDEDED;
+}
+
+a {
+    text-decoration:none;
+}
+
+.menu-bar {
+    position:relative;
+    width:100%;
+    height:50px;
+    background-color: #FFFFFF;
+}
+
+.title {
+    float: left;
+    width: 25%;
+    bottom: 0;
+    font-size: 2.4em;
+    font-weight: 900;
+    color: #652687;
+}
+
+.menu-item {
+    text-align: center;
+    float: left;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #AF94B5;
+    width: 10%;
+    bottom: 0;
+}
+
+.menu-item.active {
+    color: #652687;
+    border-bottom: 10px solid #652687;
+}
+
+/* button to add new question */
+#myBtn {
+    background-color: #63AB83;
+    height: 40px;
+    width: 10%;
+    margin-right: 5%;
+    margin-top: 0.5%;
+    float: right;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #C8C8C8;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.content-container {
+    position:relative;
+    width:50%;
+    height:130%;
+    margin-left:25%;
+    background-color: #EDEDED;
+}
+
+.post {
+    border: solid #aaaaaa;
+    border-width: 0.5px;
+    margin: 2px;
+    background-color: #fefefe;
+
+}
+

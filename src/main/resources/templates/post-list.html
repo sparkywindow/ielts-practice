@@ -1,0 +1,50 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <div th:replace="fragments/common-head::common-head"></div>
+    </head>
+    <body>
+        <div th:replace="fragments/common-menu::common-menu('best')"></div>
+        <div class="content-container">
+            <select name="sortOrder">
+                <option value="1"> 최근 질문이 올라오도록 정렬 </option>
+                <option value="2"> 댓 동영상 많을 수록 위로 정렬 </option>
+            </select>
+            <div th:replace="fragments/post-list::post-list"></div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <form action="/post/create" method="post">
+                    토픽: <input type="text" name="title" value="Please introduce yourself.">
+                    <input type="submit" value="등록">
+                </form>
+            </div>
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

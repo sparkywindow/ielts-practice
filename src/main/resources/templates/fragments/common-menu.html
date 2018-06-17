@@ -1,0 +1,16 @@
+<div class="menu-bar" th:fragment="common-menu(activeMenu)" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="title">
+        <a href="/"> 스피킹 연습방 </a>
+    </div>
+    <div th:class="${activeMenu == 'best' ? 'menu-item active' : 'menu-item' }" >
+        오늘
+    </div>
+    <div th:class="${activeMenu == 'recent' ? 'menu-item active' : 'menu-item' }" >
+        이번주
+    </div>
+    <div th:class="${activeMenu == 'login' ? 'menu-item active' : 'menu-item' }" >
+        역대
+    </div>
+
+    <div id="myBtn"> 문제내기 </div>
+</div>
